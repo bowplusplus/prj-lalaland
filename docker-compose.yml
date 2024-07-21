@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  rust:
+    build:
+      context: ./Dockerfile
+      dockerfile: Dockerfile
+    image: prj-lalaland:v0.0.1
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    environment:
+      - PORT=8080
+    command: tail -f /dev/null

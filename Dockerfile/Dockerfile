@@ -1,0 +1,5 @@
+FROM rust:1.79.0-alpine3.20
+
+WORKDIR /data
+
+EXPOSE 8080
